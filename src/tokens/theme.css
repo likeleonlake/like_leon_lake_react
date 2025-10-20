@@ -1,0 +1,48 @@
+@import url('./core.css');
+
+
+:root{
+    --color-foreground-primary: rgb(var(--color-mono-100) / var(--alpha-80));
+    --color-foreground-secondary: rgb(var(--color-mono-100) / var(--alpha-60));
+    --color-foreground-tertiary: rgb(var(--color-mono-100) / var(--alpha-50));
+    --color-foreground-inverse-primary: rgb(var(--color-mono-0) / var(--alpha-80));
+    --color-foreground-inverse-secondary: rgb(var(--color-mono-0) / var(--alpha-60));
+
+    --color-background-light-reset: rgb(var(--color-mono-0) / var(--alpha-100));
+    --color-background-dark-reset: rgb(var(--color-mono-100) / var(--alpha-100));
+    --color-background-primary: rgb(var(--color-mono-100) / var(--alpha-10));
+    --color-background-secondary: rgb(var(--color-mono-100) / var(--alpha-20));
+
+    --color-semantic-foreground-active: rgba(var(--color-mono-100) / var(--alpha-80));
+    --color-semantic-foreground-selected: rgba(var(--color-mono-100) / var(--alpha-100));
+    --color-semantic-foreground-disable: rgba(var(--color-mono-100) / var(--alpha-50));
+    --color-semantic-foreground-inverse-disable: rgba(var(--color-mono-0) / var(--alpha-50));
+    --color-semantic-foreground-inverse-active: rgba(var(--color-mono-0) / var(--alpha-80));
+    --color-semantic-foreground-inverse-selected: rgba(var(--color-mono-0) / var(--alpha-100));
+
+    --color-semantic-background-selected: rgba(var(--color-mono-100) / var(--alpha-20));
+    --color-semantic-background-hover: rgba(var(--color-mono-100) / var(--alpha-20));
+    --color-semantic-background-inverse-selected: rgba(var(--color-mono-0) / var(--alpha-20));
+    --color-semantic-background-inverse-hover: rgba(var(--color-mono-0) / var(--alpha-20));
+
+    --color-button-foreground: rgba(var(--color-mono-0) / var(--alpha-100));
+    --color-button-foreground-inverse: rgba(var(--color-mono-100) / var(--alpha-100));
+    
+    --color-button-background-active: rgba(var(--color-mono-100) / var(--alpha-100));
+    --color-button-background-hover: rgba(var(--color-mono-100) / var(--alpha-80));
+    --color-button-background-selected: rgba(var(--color-mono-100) / var(--alpha-60));
+    --color-button-background-inverse-active: rgba(var(--color-mono-0) / var(--alpha-100));
+    --color-button-background-inverse-hover: rgba(var(--color-mono-0) / var(--alpha-80));
+    --color-button-background-inverse-selected: rgba(var(--color-mono-0) / var(--alpha-60));
+
+    --color-stroke-default: rgba(var(--color-mono-100) / var(--alpha-30));
+    --color-stroke-background-init: rgba(var(--color-mono-100) / var(--alpha-30));
+    --color-stroke-background-center: rgba(var(--color-mono-100) / var(--alpha-0));
+    --color-stroke-background-end: rgba(var(--color-mono-100) / var(--alpha-30));
+    --color-stroke-divider-init: rgba(var(--color-mono-100) / var(--alpha-0));
+    --color-stroke-divider-center: rgba(var(--color-mono-100) / var(--alpha-30));
+    --color-stroke-divider-end: rgba(var(--color-mono-100) / var(--alpha-0));
+
+    --color-shadow-deep: rgba(var(--color-mono-100) / var(--alpha-20));
+    --color-shadow-rough: rgba(var(--color-mono-100) / var(--alpha-10));
+}

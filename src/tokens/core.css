@@ -1,0 +1,53 @@
+:root{
+    --color-mono-0: 251 251 251;
+    --color-mono-100: 52 52 51;
+
+    --alpha-0: 0;
+    --alpha-10: 0.02;
+    --alpha-20: 0.04;
+    --alpha-30: 0.08;
+    --alpha-40: 0.1;
+    --alpha-50: 0.5;
+    --alpha-60: 0.65;
+    --alpha-80: 0.8;
+    --alpha-100: 1;
+
+    --dimension-0: 0px;
+    --dimension-005: 0.5px;
+    --dimension-025: 2px;
+    --dimension-050: 4px;
+    --dimension-075: 6px;
+    --dimension-100: 8px;
+    --dimension-150: 12px;
+    --dimension-175: 14px;
+    --dimension-200: 16px;
+    --dimension-250: 20px;
+    --dimension-275: 22px;
+    --dimension-300: 24px;
+    --dimension-400: 32px;
+    --dimension-500: 40px;
+    --dimension-600: 48px;
+    --dimension-800: 64px;
+    --dimension-1000: 80px;
+    --dimension-2000: 160px;
+
+    --font-family-primary: 'PP Neue Montreal', system-ui, sans-serif;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --font-size-display: var(--dimension-600);
+    --font-size-headline: var(--dimension-200);
+    --font-size-body: var(--dimension-200);
+
+    --line-height-display: var(--dimension-800);
+    --line-height-headline: var(--dimension-275);
+    --line-height-body: var(--dimension-275);
+
+    --border-width: 0.5px;
+
+    --border-radii-s: var(--dimension-100);
+    --border-raddii-m: var(--dimension-300);
+    --border-radii-full: 9999px;
+}
