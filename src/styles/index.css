@@ -1,0 +1,6 @@
+/* styles/index.css */
+@import "./helpers/reset.css";
+@import "./helpers/fonts.css";
+@import "./tokens/core.css";
+@import "./tokens/theme.css";
+@import "./base/styles.css";

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import "./styles.css";
+import "./styles/index.css";
 import Guides from "./components/Guides";
 import Nav from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Modal from "./components/Modal";
+import Button from "./components/buttons/Button";
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -16,6 +17,7 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <Button />
         <Projects setSelectedProject={setSelectedProject} />
       </main>
 
