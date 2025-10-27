@@ -30,21 +30,21 @@ export default function Projects({ setSelectedProject }) {
     },
   ];
 
-  useEffect(() => {
-    const elements = document.querySelectorAll(".ratio-169");
-    if (!elements.length) return;
+  // useEffect(() => {
+  //   const elements = document.querySelectorAll(".ratio-169");
+  //   if (!elements.length) return;
 
-    const observer = new ResizeObserver(() => {
-      elements.forEach((el) => {
-        const width = el.offsetWidth;
-        el.style.height = `${(width * 9) / 16}px`;
-      });
-    });
+  //   const observer = new ResizeObserver(() => {
+  //     elements.forEach((el) => {
+  //       const width = el.offsetWidth;
+  //       el.style.height = `${(width * 9) / 16}px`;
+  //     });
+  //   });
 
-    elements.forEach((el) => observer.observe(el));
+  //   elements.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect();
-  }, []);
+  //   return () => observer.disconnect();
+  // }, []);
 
   return (
     <section className="project-section wrapper" id="projects">

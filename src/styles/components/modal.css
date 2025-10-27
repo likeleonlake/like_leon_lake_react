@@ -1,11 +1,11 @@
-/* Modal */
+/* Layout */
     .modal-overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: antiquewhite≥;
+        background: var(--color-background-light-reset);
         display: flex;
         align-items: top;
         justify-content: center;
@@ -17,19 +17,13 @@
         position: relative;
         width: 75%;
         max-height: 90vh;
-        background-color: blueviolet;
-        overflow-y: auto;
         cursor: default;
+        overflow: visible;
+        scrollbar-width: none; /* Firefox */
     }
 
-    .modal-close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
+    .modal-content::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Edge */
     }
 
     .modal-body {
@@ -47,40 +41,54 @@
         object-fit: cover;
     }
 
-
-
-
-
-
-
-
-
-    /* .project-details {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+    .ratio-169 {
+  position: relative;
+  width: 66.6%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
-.project-details h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-details p,
-.project-details li {
-  color: var(--color-text, #444);
-  line-height: 1.6;
-}
-
-.project-section-gallery .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-}
-
-.project-section-gallery img {
+.ratio-169 img {
   width: 100%;
-  border-radius: 12px;
+  height: 100%;
   object-fit: cover;
-} */
+  display: block;
+}
+
+
+/* Close button */
+.modal-button-pos{
+    position: absolute;
+    right: 0px;
+    top: var(--dimension-600);
+}
+
+.button-secondary-cont{
+    display: flex;
+    width: fit-content;
+    border-radius: var(--border-radii-full);
+    padding: var(--dimension-050);
+    
+}
+
+.modal-close{
+    display: flex;
+    cursor: pointer;
+    padding: var(--dimension-150);
+    border-radius: var(--border-radii-full);
+
+    &:hover{
+        background-color: var(--color-semantic-background-hover);
+    }
+
+    &:active{
+        background-color: var(--color-semantic-background-selected);
+        color: var(--color-semantic-foreground-selected);
+    }
+}
+
+.icon-close{
+    width: 24px;
+    aspect-ratio: 1 / 1;
+    color: var(--color-foreground-secondary);
+}

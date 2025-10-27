@@ -1,0 +1,1 @@
+export { XMarkIcon } from '@heroicons/react/20/solid';
