@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import TagIcon from "./TagIcon";
 import Divider from "./Divider";
@@ -31,69 +31,50 @@ export default function Projects({ setSelectedProject }) {
     },
   ];
 
-  // useEffect(() => {
-  //   const elements = document.querySelectorAll(".ratio-169");
-  //   if (!elements.length) return;
-
-  //   const observer = new ResizeObserver(() => {
-  //     elements.forEach((el) => {
-  //       const width = el.offsetWidth;
-  //       el.style.height = `${(width * 9) / 16}px`;
-  //     });
-  //   });
-
-  //   elements.forEach((el) => observer.observe(el));
-
-  //   return () => observer.disconnect();
-  // }, []);
-
   return (
     <section className="project-section wrapper" id="projects">
       {projects.map((project, index) => (
-        <motion.article
-          key={project.id}
-          layoutId={`project-${project.id}`}
-          className="project-cont"
-        >
-          <a
-            href="#"
-            className="project-card-cont"
-            onClick={(e) => {
-              e.preventDefault();
-              setSelectedProject(project);
-            }}
+        <article key={project.id} className="project-wrapper">
+          {/* layoutId ahora está en el contenedor clickeable */}
+          <motion.div
+            layoutId={`project-${project.id}`}
+            className="project-cont"
+            onClick={() => setSelectedProject(project)}
+            style={{ cursor: 'pointer' }}
           >
-            <div className="project-card-meta">
-              <div className="project-card-top-cont">
-                <h2 className="project-card-title text-headline">
-                  {project.title}
-                </h2>
-                <p className="project-card-subtitle">{project.subtitle}</p>
-              </div>
-
-              <div className="project-card-bottom-cont">
-                <div className="tag-cont">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="tag">
-                      <TagIcon /> {tag}
-                    </span>
-                  ))}
+            <div className="project-card-cont">
+              <div className="project-card-meta">
+                <div className="project-card-top-cont">
+                  <h2 className="project-card-title text-headline">
+                    {project.title}
+                  </h2>
+                  <p className="project-card-subtitle">{project.subtitle}</p>
                 </div>
-                <p className="project-card-date">{project.date}</p>
+
+                <div className="project-card-bottom-cont">
+                  <div className="tag-cont">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="tag">
+                        <TagIcon /> {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="project-card-date">{project.date}</p>
+                </div>
+              </div>
+
+              <div className="project-image-cont ratio-169 shadow-rough">
+                <img
+                  className="project-image"
+                  src={project.image}
+                  alt={`${project.title} Project Image`}
+                />
               </div>
             </div>
-
-            <div className="project-image-cont ratio-169 shadow-rough">
-              <img
-                className="project-image"
-                src={project.image}
-                alt={`${project.title} Project Image`}
-              />
-            </div>
-          </a>
+          </motion.div>
 
           {index < projects.length - 1 && <Divider />}
-        </motion.article>
+        </article>
       ))}
     </section>
   );

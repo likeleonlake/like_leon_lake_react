@@ -21,9 +21,10 @@ export default function App() {
       </main>
 
       {/* AnimatePresence envuelve el modal para animación de entrada/salida */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {selectedProject && (
           <Modal
+            key="modal"
             project={selectedProject}
             onClose={() => setSelectedProject(null)}
           />

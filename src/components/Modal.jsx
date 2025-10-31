@@ -39,7 +39,16 @@ export default function Modal({ project, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* 🔘 Botón de cierre */}
-        <div className="modal-button-pos">
+        <motion.div 
+          className="modal-button-pos"
+          initial={{ opacity: 0, top: -40 }}  // 👈 Empieza 40px arriba
+          animate={{ opacity: 1, top: 'var(--dimension-600)' }}    // 👈 Se mueve a su posición
+          transition={{ 
+            delay: 0.2,                      // Espera a que el modal se abra
+            duration: 0.4,
+            ease: [0.22, 1, 0.36, 1]        // Curva suave
+          }}
+        >
           <div className="button-secondary-cont shadow-deep">
             <button
               className="modal-close"
@@ -49,7 +58,7 @@ export default function Modal({ project, onClose }) {
               <XMarkIcon className="icon-close" />
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* 🔹 HERO */}
         <div className="project-card-cont">
