@@ -267,17 +267,11 @@
     .project-image-cont{
         width: 66.6%;
         background-color: var(--color-background-light-reset);
-        border-radius: var(--border-raddii-m);
+        border-radius: var(--border-radii-m);
     }
 
     .project-card-subtitle{
         color: var(--color-foreground-secondary);
-    }
-
-    .project-divider{
-        height: var(--dimension-005);
-        width: 100%;
-        background: linear-gradient(to right, var(--color-stroke-divider-init), var(--color-stroke-divider-center), var(--color-stroke-divider-end));
     }
 
     .project-card-top-cont{

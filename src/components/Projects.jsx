@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import TagIcon from "./TagIcon";
+import Divider from "./Divider";
 
 export default function Projects({ setSelectedProject }) {
   const projects = [
@@ -91,7 +92,7 @@ export default function Projects({ setSelectedProject }) {
             </div>
           </a>
 
-          {index < projects.length - 1 && <div className="project-divider"></div>}
+          {index < projects.length - 1 && <Divider />}
         </motion.article>
       ))}
     </section>

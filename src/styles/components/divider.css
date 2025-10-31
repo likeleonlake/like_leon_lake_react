@@ -1,0 +1,5 @@
+.divider{
+    height: var(--dimension-005);
+    width: 100%;
+    background: linear-gradient(to right, var(--color-stroke-divider-init), var(--color-stroke-divider-center), var(--color-stroke-divider-end));
+}

@@ -1,6 +1,6 @@
 :root{
-    --color-mono-100: 52 52 51;
     --color-mono-0: 251 251 251;
+    --color-mono-100: 52 52 51;
 
     --alpha-0: 0;
     --alpha-10: 0.02;
@@ -37,17 +37,17 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
 
-    --font-size-body: var(--dimension-200);
-    --font-size-headline: var(--dimension-200);
     --font-size-display: var(--dimension-600);
+    --font-size-headline: var(--dimension-200);
+    --font-size-body: var(--dimension-200);
 
-    --line-height-body: var(--dimension-275);
-    --line-height-headline: var(--dimension-275);
     --line-height-display: var(--dimension-800);
+    --line-height-headline: var(--dimension-275);
+    --line-height-body: var(--dimension-275);
 
-    --border-width: var(--dimension-005);
+    --border-width: 0.5px;
 
     --border-radii-s: var(--dimension-100);
-    --border-radii-m: var(--dimension-300);
+    --border-raddii-m: var(--dimension-300);
     --border-radii-full: 9999px;
 }

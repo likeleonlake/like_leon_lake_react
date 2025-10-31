@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import TagIcon from "./TagIcon";
+import { XMarkIcon } from "./Icons";
+import Divider from "./Divider";
 import "./../styles/components/modal.css";
-import { XMarkIcon } from './Icons';
 
 export default function Modal({ project, onClose }) {
   const [contentLoaded, setContentLoaded] = useState(false);
@@ -10,13 +11,11 @@ export default function Modal({ project, onClose }) {
   useEffect(() => {
     if (!project) return;
 
-    // 🚫 Bloquear el scroll de fondo
+    // 🚫 Bloquear scroll del fondo
     document.body.style.overflow = "hidden";
 
-    // 🕒 Simula carga del contenido (esto sería una llamada a Sanity en el futuro)
     const fakeLoad = setTimeout(() => setContentLoaded(true), 300);
 
-    // ✅ Limpieza segura
     return () => {
       document.body.style.overflow = "auto";
       clearTimeout(fakeLoad);
@@ -40,17 +39,25 @@ export default function Modal({ project, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* 🔘 Botón de cierre */}
-        <div className="button-secondary-cont shadow-deep modal-button-pos">
-            <button className="modal-close" onClick={onClose} aria-label="Cerrar modal">
-                <XMarkIcon className="icon-close"/>
+        <div className="modal-button-pos">
+          <div className="button-secondary-cont shadow-deep">
+            <button
+              className="modal-close"
+              onClick={onClose}
+              aria-label="Cerrar modal"
+            >
+              <XMarkIcon className="icon-close" />
             </button>
+          </div>
         </div>
 
         {/* 🔹 HERO */}
         <div className="project-card-cont">
           <div className="project-card-meta">
             <div className="project-card-top-cont">
-              <h2 className="project-card-title text-headline">{project.title}</h2>
+              <h2 className="project-card-title text-headline">
+                {project.title}
+              </h2>
               <p className="project-card-subtitle">{project.subtitle}</p>
             </div>
 
@@ -66,7 +73,7 @@ export default function Modal({ project, onClose }) {
             </div>
           </div>
 
-          <div className="project-image-cont ratio-169 shadow-rough">
+          <div className="project-image-cont ratio-169">
             <img
               className="project-image"
               src={project.image}
@@ -75,8 +82,10 @@ export default function Modal({ project, onClose }) {
           </div>
         </div>
 
-        {/* 🔸 Divider */}
-        <div className="project-divider"></div>
+        {/* 🔸 Divider visible */}
+        <div>
+          <Divider />
+        </div>
 
         {/* 🔸 CONTENIDO DEL DETALLE */}
         <AnimatePresence mode="wait">
@@ -103,8 +112,8 @@ export default function Modal({ project, onClose }) {
               <h3>Project Overview</h3>
               <p>
                 This project explores how motion and interaction can elevate user
-                experience. The goal was to build a responsive and fluid interface that
-                feels natural and purposeful.
+                experience. The goal was to build a responsive and fluid interface
+                that feels natural and purposeful.
               </p>
 
               <h3>My Role</h3>
@@ -116,9 +125,9 @@ export default function Modal({ project, onClose }) {
 
               <h3>Process</h3>
               <p>
-                The design process began with low-fidelity wireframes and evolved through
-                rapid prototyping in Figma and Framer. I focused heavily on transitions
-                and interaction flow to keep the experience smooth.
+                The design process began with low-fidelity wireframes and evolved
+                through rapid prototyping in Figma and Framer. I focused heavily on
+                transitions and interaction flow to keep the experience smooth.
               </p>
 
               <div className="modal-image-block ratio-169 shadow-rough">
@@ -131,9 +140,9 @@ export default function Modal({ project, onClose }) {
 
               <h3>Outcome</h3>
               <p>
-                The final design achieves a balance between clarity and motion. It serves
-                as a case study in how motion design supports usability and brand
-                personality simultaneously.
+                The final design achieves a balance between clarity and motion. It
+                serves as a case study in how motion design supports usability and
+                brand personality simultaneously.
               </p>
             </motion.section>
           )}

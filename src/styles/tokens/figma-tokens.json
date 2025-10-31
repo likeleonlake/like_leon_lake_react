@@ -1,0 +1,192 @@
+{
+  "color": {
+    "mono-100": {
+      "value": "#343433",
+      "type": "color"
+    },
+    "mono-0": {
+      "value": "#fbfbfb",
+      "type": "color"
+    }
+  },
+  "font-family": {
+    "primary": {
+      "value": "PP Neue Montreal",
+      "type": "text"
+    }
+  },
+  "dimension": {
+    "0": {
+      "value": 0,
+      "type": "number"
+    },
+    "100": {
+      "value": 8,
+      "type": "number"
+    },
+    "150": {
+      "value": 12,
+      "type": "number"
+    },
+    "175": {
+      "value": 14,
+      "type": "number"
+    },
+    "200": {
+      "value": 16,
+      "type": "number"
+    },
+    "250": {
+      "value": 20,
+      "type": "number"
+    },
+    "275": {
+      "value": 22,
+      "type": "number"
+    },
+    "300": {
+      "value": 24,
+      "type": "number"
+    },
+    "400": {
+      "value": 32,
+      "type": "number"
+    },
+    "500": {
+      "value": 40,
+      "type": "number"
+    },
+    "600": {
+      "value": 48,
+      "type": "number"
+    },
+    "800": {
+      "value": 64,
+      "type": "number"
+    },
+    "1000": {
+      "value": 80,
+      "type": "number"
+    },
+    "2000": {
+      "value": 160,
+      "type": "number"
+    },
+    "025": {
+      "value": 2,
+      "type": "number"
+    },
+    "050": {
+      "value": 4,
+      "type": "number"
+    },
+    "075": {
+      "value": 6,
+      "type": "number"
+    },
+    "005": {
+      "value": 0.5,
+      "type": "number"
+    }
+  },
+  "font-size": {
+    "body": {
+      "value": "{dimension.200}",
+      "type": "number"
+    },
+    "headline": {
+      "value": "{dimension.200}",
+      "type": "number"
+    },
+    "display": {
+      "value": "{dimension.600}",
+      "type": "number"
+    }
+  },
+  "line-height": {
+    "body": {
+      "value": "{dimension.275}",
+      "type": "number"
+    },
+    "headline": {
+      "value": "{dimension.275}",
+      "type": "number"
+    },
+    "display": {
+      "value": "{dimension.800}",
+      "type": "number"
+    }
+  },
+  "border-width": {
+    "primary": {
+      "value": "{dimension.005}",
+      "type": "number"
+    }
+  },
+  "border-radii": {
+    "s": {
+      "value": "{dimension.100}",
+      "type": "number"
+    },
+    "m": {
+      "value": "{dimension.300}",
+      "type": "number"
+    },
+    "full": {
+      "value": 1000,
+      "type": "number"
+    }
+  },
+  "alpha": {
+    "0": {
+      "value": 0,
+      "type": "number"
+    },
+    "10": {
+      "value": 0.02,
+      "type": "number"
+    },
+    "20": {
+      "value": 0.04,
+      "type": "number"
+    },
+    "30": {
+      "value": 0.08,
+      "type": "number"
+    },
+    "40": {
+      "value": 0.1,
+      "type": "number"
+    },
+    "50": {
+      "value": 0.5,
+      "type": "number"
+    },
+    "60": {
+      "value": 0.65,
+      "type": "number"
+    },
+    "80": {
+      "value": 0.8,
+      "type": "number"
+    },
+    "100": {
+      "value": 1,
+      "type": "number"
+    }
+  },
+  "font-weight": {
+    "regular": {
+      "value": 400,
+      "type": "number"
+    },
+    "medium": {
+      "value": 500,
+      "type": "number"
+    },
+    "bold": {
+      "value": 700,
+      "type": "number"
+    }
+  }
+}
